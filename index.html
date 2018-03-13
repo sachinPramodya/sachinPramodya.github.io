@@ -1,0 +1,35 @@
+<html>
+<head>
+<script>
+function getId(sid) {
+  if (window.XMLHttpRequest) {
+     xhr = new XMLHttpRequest();
+  } 
+  else {
+    document.write("Your browser is very old");
+  }
+
+  xhr.open("POST","getId.php",true);
+  xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded;charset=utf-8");
+  xhr.send("stdid="+sid);
+
+  xhr.onreadystatechange = function() { 
+  	if (xhr.readyState == 4 && xhr.status == 200) { 
+  		document.getElementById("details").innerHTML = xhr.responseText;
+  		document.getElementById("regtxt").value = xhr.responseText;
+  	}
+  };
+}
+</script>
+</head>
+<body>
+	<div style="padding-left: 40%;padding-top: 5%;">
+		<img src="butterfly.jpg" width=350px><br>
+    <h1>'POST' method is used</h1><br>
+		<input type="text" name="id" onkeyup="getId(this.value)"/>
+		
+		<p id="details">Details of the student will be displayed here</p>
+		<input type="text" id="regtxt">
+	</div>
+</body>
+</html>
