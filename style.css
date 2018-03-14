@@ -1,0 +1,29 @@
+.cont{
+	max-width: 1024px;
+	margin: 0 auto;
+	background: #f9f9f9;
+	font-size: 24px;
+	padding: 25px;
+
+}
+
+.parallax1{
+	background: url('img/lotus.jpg') no-repeat center;
+	background-size: cover;
+	background-attachment: fixed;
+	height:550px;
+}
+
+.parallax2{
+	background: url('img/image1.png') no-repeat center;
+	background-size: cover;
+	background-attachment: fixed;
+	height:500px;
+
+}
+#para1{
+	text-align:center;
+	color: yellow;
+
+	font-size: 100px;
+}
